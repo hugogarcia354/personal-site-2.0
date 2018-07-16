@@ -7,6 +7,7 @@
 
 <script>
 import DefaultLayout from './layouts/Default'
+
 export default {
   name: 'App',
   components: {

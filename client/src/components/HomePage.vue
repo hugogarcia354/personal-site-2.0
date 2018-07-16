@@ -86,4 +86,8 @@ export default {
 .dummy{
   height: 900px;
 }
+
+.body{
+  color: lightblue;
+}
 </style>

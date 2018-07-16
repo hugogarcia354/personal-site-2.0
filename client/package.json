@@ -10,9 +10,17 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0",
+    "@fortawesome/free-regular-svg-icons": "^5.1.0",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0",
+    "@fortawesome/vue-fontawesome": "^0.1.0",
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
+    "save": "^2.3.2",
     "vue": "^2.5.2",
+    "vue-accordion": "^1.0.0",
+    "vue-awesome": "^2.3.8",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

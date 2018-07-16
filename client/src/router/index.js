@@ -14,7 +14,11 @@ export default new Router({
       path: '/projects',
       name: 'Projects',
       component: () => import('@/components/Project')
-    }
-    
+    },
+    {
+      path: '/contact',
+      name: 'Contact Me',
+      component: () => import('@/components/Contact')
+    }    
   ]
 })
