@@ -49,7 +49,7 @@ h1{
   font-size: 16pt;
   border-radius: 12px;
   cursor: pointer;
-  width: 15%;
+  width: 250px;
 }
 
 .contactButton:hover{
@@ -67,7 +67,7 @@ h1{
   font-size: 16pt;
   border-radius: 12px;
   cursor: pointer;
-  width: 15%;
+  width: 250px;
 }
 .linkedInButton:hover{
   /* background-color:darkslategrey; */
@@ -79,4 +79,10 @@ h1{
 .body{
   color: lightblue;
 }
+
+@media only screen and (max-device-width: 1366px) {
+    .linkedInButton, .contactButton {
+        width: 75%;
+    }
+}  
 </style>

@@ -26,7 +26,7 @@
 
       Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
    </div>
-   <div class="dummy"/>
+   <!-- <div class="dummy"/> -->
  </div>
 </template>
 
@@ -83,11 +83,19 @@ export default {
   flex: 50%;
 }
 
-.dummy{
+/* .dummy{
   height: 900px;
-}
+} */
 
 .body{
   color: lightblue;
+}
+
+h1{
+  font-size: 30px;
+  text-shadow:  0 5px 15px lightblue;
+}
+.title{
+  color:lightblue;
 }
 </style>
