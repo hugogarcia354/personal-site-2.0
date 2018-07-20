@@ -8,7 +8,7 @@
 
     </div>
     <div class="contact">
-     <button class="contactButton" v-on:click="email"><span>Contact Me! <font-awesome-icon icon="envelope" spin ></font-awesome-icon></span></button>
+     <button class="contactButton" v-on:click="email"><span>Contact Me! <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
    </div>
    <br>
    <div class="linkedIn">
