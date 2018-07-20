@@ -179,7 +179,7 @@ h3{
 }
 
  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .topParallax, .midParallax{
       background-size: 250% 100%;
     }

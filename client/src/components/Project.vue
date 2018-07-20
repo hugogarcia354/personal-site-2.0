@@ -1,6 +1,41 @@
 <template>
   <div class="body">
     <h1>Article Web Crawler</h1>
+    <div class="scrolling-wrapper">
+      <div class="card">
+        <div class="awc1"/>
+        <div class="mobileDescription">
+          Source Code
+          <br>
+          Example of Code
+        </div>
+      </div>
+      <div class="card">
+        <div class="awc2"/>
+        <div class="mobileDescription">
+          Source Code
+          <br>
+          Example of Code
+        </div>
+      </div>
+      <div class="card">
+        <div class="awc3"/>
+        <div class="mobileDescription">
+          Crawler
+          <br>
+          Example of Crawler running
+        </div>
+      </div>
+      <div class="card">
+        <div class="awc4"/>
+        <div class="mobileDescription">
+          Data Aggregation
+          <br>
+          Example of Article Aggregation
+        </div>
+      </div>
+    </div>
+    <button class="mobile-button" v-on:click="aws">Check it out!</button>
     <vue-accordion class="accordion" :items="crawlerPics" :styles="accordionSpecs"></vue-accordion>
     <br>
     <div class="description">
@@ -11,6 +46,49 @@
     </div>
     <br>
     <h1>ECS</h1>
+    <div class="scrolling-wrapper">
+      <div class="card">
+        <div class="ecs1"/>
+        <div class="mobileDescription">
+          Dynamic Interest Tags
+          <br>
+          Interests based on available articles
+        </div>
+      </div>
+      <div class="card">
+        <div class="ecs2"/>
+        <div class="mobileDescription">
+          Dynamic Interest Menu
+          <br>
+          Article menu based on chosen interests
+        </div>
+      </div>
+      <div class="card">
+        <div class="ecs3"/>
+        <div class="mobileDescription">
+          Article Framing
+          <br>
+          View chosen article onsite
+        </div>
+      </div>
+      <div class="card">
+        <div class="ecs4"/>
+        <div class="mobileDescription">
+          Sweepstakes
+          <br>
+          Enter to win prizes!
+        </div>
+      </div>
+      <div class="card">
+        <div class="ecs5"/>
+        <div class="mobileDescription">
+          Beautiful Design
+          <br>
+          Pleasant Visuals
+        </div>
+      </div>
+    </div>
+    <button class="mobile-button" v-on:click="ecs">Check it out!</button>
     <vue-accordion class="accordion" :items="ECSPics" :styles="accordionSpecs"></vue-accordion> 
     <br> 
     <div class="description">
@@ -22,7 +100,6 @@
     <div class="github">
       <h1>GitHub</h1>
       <button class="GitHubButton" v-on:click="GitHub"><span>
-        <font-awesome-icon icon="github" ></font-awesome-icon>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
 
         Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
@@ -35,9 +112,6 @@
 
 <script>
 import Vue from 'vue'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
-library.add(faGithub)
 export default {
   components: {
   },
@@ -141,6 +215,12 @@ export default {
   methods: {
     GitHub: function(event) {
       window.open('https://github.com/hugogarcia354');
+    },
+    aws: function(event) {
+      window.open('https://github.com/extra-curricular-schooling/ecs-development/tree/master/ECSDevServer/ECS.WebCrawler');
+    },
+    ecs: function(event) {
+      window.open('https://ecschooling.org/#/');
     }
   }
 }
@@ -160,6 +240,7 @@ h1{
   font-size: 30px;
   text-shadow:  0 5px 15px lightblue;
 }
+
 span{
 color: lightblue;
 }
@@ -178,4 +259,154 @@ color: lightblue;
 .GitHubButton:active{
   outline:none;
 }
+
+.scrolling-wrapper{
+  display:none;
+}
+.mobile-button{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion {
+    display: none;
+  }
+  .scrolling-wrapper{
+    display: block;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    size:300px;
+  }
+  .card {
+    display: inline-block;  
+    background-color: black;
+  }
+  .awc1{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/CrawlerCodeEx.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 325%; 
+    background-position: 20%;
+    background-repeat: no-repeat;
+  }
+  .awc2{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/CrawlerCodeEx2.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 325%; 
+    background-position: 23%;
+    background-repeat: no-repeat;
+  }
+  .awc3{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/CrawlerRunning.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 325%; 
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  .awc4{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/CrawlerDB.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 325%; 
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  .ecs1{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/ECSInterests.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 325%; 
+    background-position: center top 10%;
+    background-repeat: no-repeat;
+  }
+
+  .ecs2{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/ECSSideBar.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 200%; 
+    background-position: 22% 5%;
+    background-repeat: no-repeat;
+  }
+  .ecs3{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/ECSArticleSample.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 250%; 
+    background-position: left 30% top 10%;
+    background-repeat: no-repeat;
+  }
+  .ecs4{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/ECSSweepstakes.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 300%; 
+    background-position: left 44% top 10%;
+    background-repeat: no-repeat;
+  }
+ .ecs5{
+    margin-top: 0%;
+    background-color: black;
+    /*set image*/
+    background-image: url(/static/images/ECSDesign.JPG);
+    /* Set a specific height */
+    height: 300px;
+    width: 200px;
+    background-size: 280%; 
+    background-position: left 15% top 85%;
+    background-repeat: no-repeat;
+  }
+  .mobileDescription{
+    font-size: 60%;
+    color:silver;
+  }
+  .mobile-button{
+    display: inline-block;
+    background-color:darkslategrey;
+    border:none;
+    color:white;
+    padding: 15px 30px;
+    font-size: 16pt;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 75%;
+  }
+}
+
 </style>
