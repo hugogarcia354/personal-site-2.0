@@ -3,15 +3,15 @@
     <a class = "icon" v-on:click="hamburger">&#9776;</a>
      <div class="HamburgerSeparator"/>
     <p class="level-item has-text-centered">
-      <router-link tag="button" id="button" to="/" class="link"> <font-awesome-icon icon="home"></font-awesome-icon> Home</router-link>
+      <router-link tag="button" id="button" to="/" class="link" v-on:click.native="hamburger"> <font-awesome-icon icon="home"></font-awesome-icon> Home</router-link>
     </p>
     <div class="separator"/>
     <p class="level-item has-text-centered">
-      <router-link tag="button" id="button" to="/projects" class="link"><font-awesome-icon icon="folder-open"></font-awesome-icon> Projects</router-link>
+      <router-link tag="button" id="button" to="/projects" class="link" v-on:click.native="hamburger"><font-awesome-icon icon="folder-open"></font-awesome-icon> Projects</router-link>
     </p>
     <div class="separator"/>
     <p class="level-item has-text-centered">
-      <router-link tag="button" id="button" to="/contact" class="link"><font-awesome-icon icon="address-card"></font-awesome-icon> Contact Me</router-link>
+      <router-link tag="button" id="button" to="/contact" class="link" v-on:click.native="hamburger"><font-awesome-icon icon="address-card"></font-awesome-icon> Contact Me</router-link>
     </p>
   </nav>
 </template>
@@ -108,7 +108,7 @@ export default {
 @media screen and (max-width: 768px) {
  /* Display responsive menu */
   #navBarResponsive{
-    position:relative;
+    position:fixed;
   }
    #navBarResponsive .icon {
     float: center;

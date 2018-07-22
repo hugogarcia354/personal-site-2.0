@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <button class="mobile-button" v-on:click="aws">Check it out!</button>
+    <button class="mobile-button" v-on:click="redirect('https://github.com/extra-curricular-schooling/ecs-development/tree/master/ECSDevServer/ECS.WebCrawler')">Check it out!</button>
     <vue-accordion class="accordion" :items="crawlerPics" :styles="accordionSpecs"></vue-accordion>
     <br>
     <div class="description">
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-    <button class="mobile-button" v-on:click="ecs">Check it out!</button>
+    <button class="mobile-button" v-on:click="redirect('https://ecschooling.org/#/')">Check it out!</button>
     <vue-accordion class="accordion" :items="ECSPics" :styles="accordionSpecs"></vue-accordion> 
     <br> 
     <div class="description">
@@ -99,7 +99,7 @@
     <br>
     <div class="github">
       <h1>GitHub</h1>
-      <button class="GitHubButton" v-on:click="GitHub"><span>
+      <button class="GitHubButton" v-on:click="redirect('https://github.com/hugogarcia354')"><span>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
 
         Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
@@ -213,14 +213,8 @@ export default {
     }
   },
   methods: {
-    GitHub: function(event) {
-      window.open('https://github.com/hugogarcia354');
-    },
-    aws: function(event) {
-      window.open('https://github.com/extra-curricular-schooling/ecs-development/tree/master/ECSDevServer/ECS.WebCrawler');
-    },
-    ecs: function(event) {
-      window.open('https://ecschooling.org/#/');
+    redirect: function(url) {
+      window.open(url);
     }
   }
 }

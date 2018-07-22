@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <default-layout/>
+    <default-layout class="default"/>
+    <div class="space"/>
     <router-view/>
   </div>
 </template>
@@ -35,6 +36,17 @@ body {
 }
 html {
     height: 100%;
+}
+
+.default{
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.space{
+  height: 4.5em;
+  display: block;
 }
 
 </style>
