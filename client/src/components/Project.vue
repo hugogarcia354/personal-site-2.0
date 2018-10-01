@@ -39,13 +39,18 @@
     <vue-accordion class="accordion" :items="crawlerPics" :styles="accordionSpecs"></vue-accordion>
     <br>
     <div class="description">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
-
-      Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
-
+      The Article Web Crawler is an application used by the ECS web site to aggregate news articles. Ran as an executable, the application can be ran at anytime and targets specific whitelisted websites. The application then "crawls" through each article on the site and matches the articles key tags with targeted keywords. If a match is found, then the article gets loaded on to the ECS database for use by the ECS User Base.
+        <div class="projectSpecs">
+          <h2>Project Specifications</h2>
+          <div class="specList">
+              <li>Built with C#</li>
+              <li>Separate executable</li>
+              <li>Can be run from any machine and links to specified database</li>
+          </div>
+        </div>
     </div>
     <br>
-    <h1>ECS</h1>
+    <h1>ECS (Extra Curricular Schooling)</h1>
     <div class="scrolling-wrapper">
       <div class="card">
         <div class="ecs1"/>
@@ -88,25 +93,32 @@
         </div>
       </div>
     </div>
-    <button class="mobile-button" v-on:click="redirect('https://ecschooling.org/#/')">Check it out!</button>
+    <!-- <button class="mobile-button" disabled= 'true' v-on:click="redirect('https://ecschooling.org/#/')">Check it out!</button> -->
     <vue-accordion class="accordion" :items="ECSPics" :styles="accordionSpecs"></vue-accordion> 
     <br> 
     <div class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
-
-      Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
+      A Single Page Web Application, ECS is a website that is directed to users that want to have an easy hub to acquire articles on their interests. Users choose from a set of interests and are then shown a list of articles they can read from. Once read, users earn points that can be used to enter raffles and win real prizes.  
+      <div class="projectSpecs">
+          <h2>Project Specifications</h2>
+          <div class="specList">
+              <li>ASP.NET Server</li>
+              <li>Vue.JS FrontEnd</li>
+              <li>Using a hosted Database</li>
+              <li>Admin Capabilities</li>
+              <li>User Account Capabilities</li>
+          </div>
+        </div>
     </div>
     <br>
     <div class="github">
       <h1>GitHub</h1>
       <button class="GitHubButton" v-on:click="redirect('https://github.com/hugogarcia354')"><span>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
-
-        Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
+        Click Here to see the source control of many of the projects I have worked on, including the projects listed above.
       </span>
       </button>
       
     </div>
+       <br><br><br>
   </div>
 </template>
 
@@ -147,31 +159,31 @@ export default {
         {
           title: 'Dynamic Interest Tags',
           text: 'Interests based on available articles',
-          url: 'https://ecschooling.org/#/',
+          // url: 'https://ecschooling.org/#/',
           image: '/static/images/ECSInterests.JPG'
         },
         {
           title: 'Dynamic Interest Menu',
           text: 'Article menu based on chosen interests',
-          url: 'https://ecschooling.org/#/',
+          //url: 'https://ecschooling.org/#/',
           image: '/static/images/ECSSideBar.JPG'
         },
         {
           title: 'Article Framing',
           text: 'View chosen article onsite',
-          url: 'https://ecschooling.org/#/',
+         // url: 'https://ecschooling.org/#/',
           image: '/static/images/ECSArticleSample.JPG'
         },
         {
           title: 'Sweepstakes',
           text: 'Enter to win prizes!',
-          url: 'https://ecschooling.org/#/',
+          //url: 'https://ecschooling.org/#/',
           image: '/static/images/ECSSweepstakes.JPG'
         },
         {
           title: 'Beautiful Design',
           text: 'Pleasant Visuals',
-          url: 'https://ecschooling.org/#/',
+          //url: 'https://ecschooling.org/#/',
           image: '/static/images/ECSDesign.JPG'
         },
       ],
@@ -233,6 +245,23 @@ export default {
 h1{
   font-size: 30px;
   text-shadow:  0 5px 15px lightblue;
+}
+
+h2{
+  font-size: 22px;
+  border-bottom: 3px solid lightblue;
+}
+
+.projectSpecs{
+  margin: auto;
+  width: 40%;
+}
+
+.specList{
+  margin: auto;
+  text-align: left;
+  padding: 2%;
+  width:100%;
 }
 
 span{

@@ -1,19 +1,28 @@
 <template>
   <div class="body">
-    <h1>Contact Information</h1>
+    <h1>Contact Me</h1>
     <div class="description">
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
-
-      Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
-
+      If interested in working with me, please fill in the following form
+    </div>
+    <div class="contactForm">
+      <label class="form-label" for="name" required="required">Name: </label>
+      <br>
+      <input class="form-input" v-model="name" required="required" />
+      <br>
+      <label class="form-label" for="email">Email: </label>
+      <br>
+      <input class="form-input" type = "email" v-model="emailAddress"/>
+      <br>
+      <label class="form-label" for="message">Message: </label>
+      <br>
+      <textarea rows="10" class="messageInput" v-model="message"/>
     </div>
     <div class="contact">
-     <button class="contactButton" v-on:click="email"><span>Contact Me! <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
+     <button class="contactButton" v-on:click="email" :disabled=hideButton> <span> Send Message <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
+     <button class="contactButtonDisabled" :disabled=!hideButton> <span> Fill in Form <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
    </div>
    <br>
-   <div class="linkedIn">
-     <button class="linkedInButton" v-on:click="linkedIn"><span>LinkedIn <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"></font-awesome-icon></span></button>
-   </div>
+      <br><br><br>
   </div>
 </template>
 
@@ -21,16 +30,30 @@
 import Vue from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 library.add(faEnvelope)
-library.add(faLinkedin)
 export default {
+  data () {
+    return {
+      name: '',
+      emailAddress: '',
+      message: '',
+    }
+  },
+  computed: {
+    hideButton: function() {
+      if (this.name == '' || this.emailAddress == '' || this.message == '') {
+        return true;
+      }
+      else  {
+        return false;
+     }
+    }
+  },
   methods: {
     email: function(event) {
-      window.open('mailto:hugogarcia354@gmail.com');
-    },
-    linkedIn: function(event) {
-      window.open('https://www.linkedin.com/in/hugo-garcia-a936b6b0/');
+      var emailBody = "Name: " + this.name +"\n\rEmail: " + this.emailAddress + "\n\rMessage: " + this.message;
+      emailBody = encodeURIComponent(emailBody);
+      window.open('mailto:hugogarcia354@gmail.com?subject=Correspondance&body=' + emailBody);
     }
   }
 }
@@ -52,14 +75,8 @@ h1{
   width: 250px;
 }
 
-.contactButton:hover{
-  /* background-color:darkslategrey; */
-  border:2px solid darkslategray;
-  /* color:blue; */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.644);
-  font-size: 18pt;
-}
-.linkedInButton{
+.contactButton:disabled{
+  display: none;
   background-color:darkslategrey;
   border:none;
   color:white;
@@ -69,15 +86,49 @@ h1{
   cursor: pointer;
   width: 250px;
 }
-.linkedInButton:hover{
+.contactButtonDisabled{
+  background-color:grey;
+  border:none;
+  color:white;
+  padding: 15px 30px;
+  font-size: 16pt;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.contactButtonDisabled:disabled{
+  display: none;
+  background-color:darkslategrey;
+  border:none;
+  color:white;
+  padding: 15px 30px;
+  font-size: 16pt;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 250px;
+}
+textarea {
+  width: 100%;
+}
+.contactButton:hover{
   /* background-color:darkslategrey; */
   border:2px solid darkslategray;
   /* color:blue; */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.644);
   font-size: 18pt;
 }
+
 .body{
   color: lightblue;
+}
+
+.contactForm{
+  display:block;
+  margin:auto;
+  width: 50%;
+  padding: 0 5% ;
+  text-align: left;
 }
 
 @media only screen and (max-device-width: 1366px) {
