@@ -6,10 +6,11 @@
      <h2>Freelance Developer</h2>
    </div>
    <div class="topBody">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum sed tellus eu pellentesque. Curabitur accumsan felis sed mollis viverra. Fusce ac arcu sem. Nulla facilisi. Donec et gravida sapien, et lobortis tellus. Proin magna risus, tincidunt sed justo eu, efficitur placerat risus. Nunc viverra et sem sed viverra. Cras dictum, odio id suscipit feugiat, justo felis tempor ipsum, sed pretium lorem metus sit amet nisl. Sed sit amet mattis lorem. Suspendisse arcu nibh, auctor eget dignissim id, sollicitudin id risus. Ut eu orci augue. Aenean facilisis, quam et vulputate sodales, justo sem blandit quam, ac varius felis diam eu arcu. Etiam sed mi consequat, vulputate magna non, ornare erat. Nulla nulla risus, venenatis vel consequat at, aliquam ut erat.
-
-      Sed venenatis faucibus orci at fermentum. Nullam gravida elit finibus libero rutrum lacinia. Fusce vel elementum nulla, at luctus metus. Vestibulum consequat fermentum aliquam. Proin bibendum massa ac viverra maximus. In sodales facilisis quam, non auctor quam fringilla at. Morbi nec pharetra diam, in mattis tellus. Donec vel eros laoreet, sodales odio sit amet, dictum odio. Fusce non est vulputate magna convallis finibus. Etiam arcu lacus, iaculis malesuada massa ut, ultricies dignissim nibh. Etiam in dui et erat placerat laoreet. Cras non risus eget ante accumsan varius. Proin sed sagittis purus, eget porttitor arcu. Fusce rutrum, sem pharetra interdum volutpat, nulla purus tincidunt nunc, ac imperdiet sem diam sit amet dui.
-
+     Hello! I'm Hugo Garcia and I am a Freelance Developer with skills in developing Business Applications and Web Applications.<br>
+     With skills in various programming languages and database programming, I can create an application that will fit your needs.<br>
+     As a recent recipient of a BS in Computer Science, you can bet that I will create an application using top of the line technology. <br>
+     Go ahead and take a look around to see my achievements while I was in school as well as some of the projects I have worked in. <br>
+     Before you leave, make sure to send me a message to tell me what you think and if you would like to work with me!
     </div>
 
    <div class="education">
@@ -18,7 +19,7 @@
      <div class="longbeach" v-on:click="redirect('https://www.csulb.edu/')"/>
      <div class="bottomBody">
        <h4>2016-2018 <br>Bachelor of Science in Computer Science</h4>
-       Located in Long Beach, California, CSULB has repeatedly ranked as one of the Top 50 Undergraduate programs in the nation according to <a href = "https://www.usnews.com/best-colleges/california-state-university-long-beach-1139/overall-rankings"> US News Best Colleges.</a> During my time at CSULB...
+       Located in Long Beach, California, CSULB has repeatedly ranked as one of the Top 50 Undergraduate programs in the nation according to <a href = "https://www.usnews.com/best-colleges/california-state-university-long-beach-1139/overall-rankings"> US News Best Colleges.</a> During my time at CSULB, I faced many challenges that allowed me to acquire a strong understanding of programming fundamentals. Through my courses, I have learned how to develop in many different languages, including but not limited to: C, C++, C#, Java, and Python. I also learned how to create websites via HTML, JavaScript, and server technologies. Striving for knowledge, I was awarded academic honors and earned memberships to top Honor Societies. Since graduating in 2018 with a Bachelors of Science in Computer Science, I have further increased my skills in development through practice and work.
    </div>
    <br>
      <h3>Honor Societies and Clubs</h3>

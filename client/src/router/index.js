@@ -7,6 +7,7 @@ export default new Router({
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -22,6 +23,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact Me',
       component: () => import('@/components/Contact')
+    },
+    {
+      path: '*',
+      name: 'Does Not Exist!',
+      component: () => import('@/components/404')
     }    
   ]
 })

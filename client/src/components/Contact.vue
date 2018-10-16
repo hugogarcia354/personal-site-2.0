@@ -9,6 +9,9 @@
       <br>
       <input class="form-input" v-model="name" required="required" />
       <br>
+      <p class="invalidEntry" v-if="invalidEmail">
+        <b>*Please enter a valid email*</b>
+      </p>
       <label class="form-label" for="email">Email: </label>
       <br>
       <input class="form-input" type = "email" v-model="emailAddress"/>
@@ -18,8 +21,8 @@
       <textarea rows="10" class="messageInput" v-model="message"/>
     </div>
     <div class="contact">
-     <button class="contactButton" v-on:click="email" :disabled=hideButton> <span> Send Message <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
-     <button class="contactButtonDisabled" :disabled=!hideButton> <span> Fill in Form <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
+     <button class="contactButton" v-on:click="sendMessage" :disabled=hideButton> <span> Send Message <font-awesome-icon icon="envelope" ></font-awesome-icon></span></button>
+     <button class="contactButtonDisabled" :disabled=!hideButton> <span> Completely Fill in Form</span></button>
    </div>
    <br>
       <br><br><br>
@@ -34,26 +37,40 @@ library.add(faEnvelope)
 export default {
   data () {
     return {
-      name: '',
-      emailAddress: '',
-      message: '',
+      invalidEmail: false,
+      name: null,
+      emailAddress: null,
+      message: null,
     }
   },
   computed: {
     hideButton: function() {
-      if (this.name == '' || this.emailAddress == '' || this.message == '') {
+      if (!this.name  || !this.emailAddress  || !this.message ) {
         return true;
       }
       else  {
-        return false;
+          return false;
      }
     }
   },
   methods: {
-    email: function(event) {
+    email: function() {
       var emailBody = "Name: " + this.name +"\n\rEmail: " + this.emailAddress + "\n\rMessage: " + this.message;
       emailBody = encodeURIComponent(emailBody);
       window.open('mailto:hugogarcia354@gmail.com?subject=Correspondance&body=' + emailBody);
+    },
+    validEmail: function(emailAddress) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(emailAddress);
+    },
+    sendMessage: function(event) {
+      if(this.validEmail(this.emailAddress)){
+        this.invalidEmail = false;
+        this.email();
+      }
+      else {
+        this.invalidEmail = true;
+      }
     }
   }
 }
@@ -130,7 +147,9 @@ textarea {
   padding: 0 5% ;
   text-align: left;
 }
-
+.invalidEntry{
+  color: red;
+}
 @media only screen and (max-device-width: 1366px) {
     .linkedInButton, .contactButton {
         width: 75%;
